@@ -1,0 +1,15 @@
+import pandas as pd
+import numpy as np
+
+data = {
+    'Name': ['Jai', 'Princi', 'Gaurav', 'Anuj'],
+    'Age': [27, 24, np.nan, 32],
+    'Score': [85, np.nan, 78, 90]
+}
+
+df = pd.DataFrame(data)
+
+print(df)                 # Display DataFrame
+print(df[['Name']])       # Select column
+print(df.isnull())        # Check missing values
+print(df.dropna())        # Remove missing values
