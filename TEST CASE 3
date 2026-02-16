@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+funcs = [
+    (np.exp(x/3), 'Exponential'), (np.log1p(x), 'Logarithmic'),
+    (np.sin(x), 'Sine'), ((x-5)**2, 'Quadratic')
+]
+
+fig, axes = plt.subplots(2, 2, figsize=(8, 6), constrained_layout=True)
+
+for ax, (data, title) in zip(axes.flat, funcs):
+    ax.plot(x, data)
+    ax.set_title(title)
+    ax.grid(True, alpha=0.3)
+
+plt.suptitle('Mathematical Functions Gallery')
+plt.show()
