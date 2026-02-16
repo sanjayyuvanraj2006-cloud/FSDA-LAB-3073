@@ -1,0 +1,8 @@
+# list of strings
+lst = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+
+# Calling DataFrame constructor on list
+df = pd.DataFrame(lst)
+
+# Print the DataFrame
+print(df)
